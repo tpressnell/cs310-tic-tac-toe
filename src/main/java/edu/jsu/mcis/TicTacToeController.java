@@ -1,6 +1,6 @@
 package edu.jsu.mcis;
 
-public class TicTacToeController {
+public class TicTacToeController implements ActionListener{
 
     private final TicTacToeModel model;
     private final TicTacToeView view;
@@ -36,6 +36,19 @@ public class TicTacToeController {
 
         view.showResult(model.getResult().toString());
 
+    }
+
+    public String getMarkAsString(int row, int col) {       
+      return (model.getMark(row, col).toString());
+    }
+
+    public TicTacToeView getView() {
+        return view;
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent event) {
+        // INSERT YOUR CODE HERE
     }
 
 }

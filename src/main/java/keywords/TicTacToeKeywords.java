@@ -3,7 +3,7 @@ package keywords;
 import edu.jsu.mcis.*;
 
 public class TicTacToeKeywords {
-	
+
     private TicTacToeModel board;
 
     public void startNew3x3Game() {

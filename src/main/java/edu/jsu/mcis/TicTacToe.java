@@ -1,6 +1,10 @@
 package edu.jsu.mcis;
 
-public class TicTacToe {
+import java.awt.EventQueue;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class TicTacToe{
 
     public static final int DEFAULT_WIDTH = 3;
 
@@ -21,17 +25,21 @@ public class TicTacToe {
 
         }
 
-        /* Create Controller */
+        int startWidth = width;
 
-        TicTacToeController controller = new TicTacToeController(width);
+        /* Create Controller */
+        EventQueue.invokeLater(() -> {
+          TicTacToeController controller = new TicTacToeController(startWidth);
 
         /* Start Main Loop */
-        
+
           JFrame win = new JFrame("Tic-Tac-Toe");
           win.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
           win.add(controller.getView());
           win.pack();
           win.setVisible(true);
+        });
+
 
     }
 

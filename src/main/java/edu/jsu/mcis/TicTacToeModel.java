@@ -319,7 +319,7 @@ public class TicTacToeModel {
         for(int i = 0; i < width; ++i){
           output.append(i);
           for(int j = 0; j < width; ++j){
-            output.append(Mark.EMPTY);
+            output.append(board[i][j]);
           }
         }
 
